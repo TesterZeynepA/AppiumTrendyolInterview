@@ -23,7 +23,7 @@ public class ReusableMethods {
     WebDriverWait wait;
     public ReusableMethods(AndroidDriver androidDriver) {
         driver = androidDriver;
-        wait = new WebDriverWait(androidDriver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(androidDriver, Duration.ofSeconds(70));
     }
 
     public WebElement findElement(By by) {
@@ -170,7 +170,7 @@ public class ReusableMethods {
         Sequence scroll = new Sequence(finger, 0);
         scroll.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY));
         scroll.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-        scroll.addAction(finger.createPointerMove(Duration.ofMillis(2000), PointerInput.Origin.viewport(), endx, endy));
+        scroll.addAction(finger.createPointerMove(Duration.ofMillis(500), PointerInput.Origin.viewport(), endx, endy));
         scroll.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         driver.perform(List.of(scroll));
     }

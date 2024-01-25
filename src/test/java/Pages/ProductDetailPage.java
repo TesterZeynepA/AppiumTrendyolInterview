@@ -13,14 +13,12 @@ public class ProductDetailPage {
         methods = new ReusableMethods(driver);
     }
 
-    By addButton = By.id("android_add_button");
-    By shoppingCartIcon = By.id("android_add_button");
-    By productName = By.id("android_");
-    public String productText;
+    By addButton = By.id("trendyol.com:id/primaryButton");
+    By shoppingCartIcon = By.id("trendyol.com:id/productDetailBasket");
+
 
     public void addProductToShoppingCart(){
 
-        productText = methods.getText(productName);
         methods.click(addButton);
     }
 

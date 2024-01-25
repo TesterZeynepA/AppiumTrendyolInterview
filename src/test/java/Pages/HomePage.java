@@ -13,7 +13,7 @@ public class HomePage {
         methods = new ReusableMethods(driver);
     }
 
-    By searchBox = By.id("Android");
+    By searchBox = By.id("trendyol.com:id/edittext_search_view");
 
     By popUpMessage = By.id("trendyol.com:id/imageViewTooltipClose");
 
@@ -28,6 +28,7 @@ public class HomePage {
     public void searchForOnHomePage(String productName){
 
         methods.sendKeys(searchBox,productName);
+        methods.clickSearchButton();
     }
 
 }

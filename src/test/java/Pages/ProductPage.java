@@ -13,8 +13,12 @@ public class ProductPage {
         methods = new ReusableMethods(driver);
     }
 
-    By desiredProduct = By.id("android");
+
     By popUpMessage = By.id("trendyol.com:id/imageViewTooltipClose");
+
+    By productName = By.id("(//android.widget.TextView[@resource-id='trendyol.com:id/textview_title_product'])[3]");
+
+    public static String productText;
 
     public void clickProductOnProductPage(int productNumber){
 
@@ -22,9 +26,10 @@ public class ProductPage {
 
         methods.scrollDown();
         methods.scrollDown();
-        methods.scrollDown();
 
-        methods.click(desiredProduct);
+        productText = methods.getText(productName);
+
+        methods.click(productName);
 
 
     }
