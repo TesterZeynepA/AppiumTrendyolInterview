@@ -14,8 +14,11 @@ public class ProductPage {
     }
 
     By desiredProduct = By.id("android");
+    By popUpMessage = By.id("trendyol.com:id/imageViewTooltipClose");
 
     public void clickProductOnProductPage(int productNumber){
+
+        methods.click(popUpMessage);
 
         methods.scrollDown();
         methods.scrollDown();

@@ -14,10 +14,17 @@ public class ProductDetailPage {
     }
 
     By addButton = By.id("android_add_button");
+    By shoppingCartIcon = By.id("android_add_button");
+    By productName = By.id("android_");
+    public String productText;
 
     public void addProductToShoppingCart(){
 
+        productText = methods.getText(productName);
         methods.click(addButton);
+    }
 
+    public void clickShoppingCartIcon(){
+        methods.click(shoppingCartIcon);
     }
 }

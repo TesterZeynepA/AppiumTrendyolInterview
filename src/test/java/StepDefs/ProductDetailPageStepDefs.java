@@ -13,4 +13,9 @@ public class ProductDetailPageStepDefs {
 
         pdp.addProductToShoppingCart();
     }
+
+    @When("click ShoppingCart on Product Detail Page")
+    public void clickShoppingCartOnProductDetailPage() {
+        pdp.clickShoppingCartIcon();
+    }
 }

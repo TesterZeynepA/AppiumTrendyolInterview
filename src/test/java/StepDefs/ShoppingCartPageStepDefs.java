@@ -11,7 +11,7 @@ public class ShoppingCartPageStepDefs {
 
     @Then("should see the Product on ShoppingCart Page")
     public void shouldSeeTheProductOnShoppingCartPage() {
-        scp.checkProductOnShoppingCartPage();
+        scp.checkProductOnShoppingCartPageWithName();
     }
 
     @When("increase the product by one on shoppingCart Page")

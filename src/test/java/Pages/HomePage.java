@@ -15,6 +15,12 @@ public class HomePage {
 
     By searchBox = By.id("Android");
 
+    By popUpMessage = By.id("trendyol.com:id/imageViewTooltipClose");
+
+    public void closePopUpMessage() {
+        methods.click(popUpMessage);
+    }
+
     public void checkHomePage(){
         methods.checkElement(searchBox);
     }

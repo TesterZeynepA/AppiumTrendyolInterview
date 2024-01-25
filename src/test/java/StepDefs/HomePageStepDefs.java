@@ -11,6 +11,7 @@ public class HomePageStepDefs {
 
     @Given("user is on the Home Page")
     public void userIsOnTheHomePage() {
+        hp.closePopUpMessage();
         hp.checkHomePage();
     }
 
